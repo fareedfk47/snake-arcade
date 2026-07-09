@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SNAKE ARCADE</title>
+  <meta name="description" content="Classic Snake – retro arcade pixel-art edition" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <div class="cabinet">
+
+    <header class="marquee">
+      <div class="marquee__lights" aria-hidden="true">
+        <span class="bulb b-red"></span>
+        <span class="bulb b-yel"></span>
+        <span class="bulb b-grn"></span>
+        <span class="bulb b-cyn"></span>
+        <span class="bulb b-mag"></span>
+        <span class="bulb b-red"></span>
+        <span class="bulb b-yel"></span>
+      </div>
+      <div class="marquee__brand">
+        <span class="marquee__star" aria-hidden="true">★</span>
+        <h2 class="marquee__title">SNAKE ARCADE</h2>
+        <span class="marquee__star" aria-hidden="true">★</span>
+      </div>
+      <div class="marquee__lights" aria-hidden="true">
+        <span class="bulb b-mag"></span>
+        <span class="bulb b-cyn"></span>
+        <span class="bulb b-grn"></span>
+        <span class="bulb b-yel"></span>
+        <span class="bulb b-red"></span>
+        <span class="bulb b-yel"></span>
+        <span class="bulb b-grn"></span>
+      </div>
+    </header>
+
+   
+    <main class="screen">
+      <section>
+
+        <div class="infos">
+          <div class="info">
+            <h3>HI-SCORE<span id="highscore">0</span></h3>
+          </div>
+          <div class="info info--accent">
+            <h3>SCORE<span id="score">0</span></h3>
+          </div>
+          <div class="info">
+            <h3>TIME<span id="time">00:00</span></h3>
+          </div>
+        </div>
+
+        <div class="board-wrap">
+          <div class="board"></div>
+
+          <!-- Overlay: start / pause / game-over -->
+          <div class="overlay" id="overlay">
+            <pre class="overlay__boot" id="bootText"></pre>
+            <h1 class="overlay__title" id="overlayTitle">SNAKE.EXE</h1>
+            <p  class="overlay__message" id="overlayMessage">INSERT COIN TO PLAY</p>
+            <div class="overlay__score" id="overlayScore" hidden>
+              <span>SCORE&nbsp;<b id="finalScore">0</b></span>
+              <span>BEST&nbsp;<b id="finalHighScore">0</b></span>
+            </div>
+            <button class="pixel-btn overlay__action" id="overlayButton">PRESS START</button>
+          </div>
+        </div>
+
+      
+        <div class="controls">
+          <div class="pixel-key" id="pauseBtn" aria-disabled="true">[ SPACE ] PAUSE</div>
+          <div class="pixel-key" id="restartBtn">[ ENTER ] RESTART</div>
+          <span class="controls__hint">ARROWS TO MOVE</span>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="cab-footer">
+      <span class="coin-prompt">INSERT COIN</span>
+      <span class="cab-copy">© 2003 SNAKE CO. — ALL RIGHTS RESERVED BY FAREED KHAN</span>
+    </footer>
+
+    <!-- Screen effects -->
+    <div class="scanlines"  aria-hidden="true"></div>
+    <div class="screen-glow" aria-hidden="true"></div>
+
+  </div><!-- /.cabinet -->
+
+  <script src="index.js"></script>
+</body>
+</html>
